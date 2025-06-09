@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Message</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f3f3;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    .message-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: 40px auto;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      color: #007bff;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 10px 0 20px;
+    }
+
+    h3 {
+      color: #777;
+    }
+
+    .btn-group {
+      margin-top: 20px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      margin: 0 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    .btn-edit {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .btn-delete {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <div class="message-container">
+    <h1>Message from <%= chats.from %></h1>
+    <p><%= chats.message %></p>
+    <h3><%= chats.time.toString().split(" ")[4] %></h3>
+
+    <div class="btn-group">
+      <button class="btn btn-edit" onclick="window.location.href='/chats/msg/<%= chats._id %>/edit'">Edit</button>
+      
+      <form action="/chats/msg/<%= chats._id %>?_method=DELETE" method="POST" style="display:inline;">
+        <button type="submit" class="btn btn-delete">Delete</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

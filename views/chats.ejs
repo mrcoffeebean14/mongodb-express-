@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Whatsapp</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Whatsapp</h1>
+  <h2>Chats</h2>
+
+  <div class="chat-list">
+    <% chats.forEach(chat => { %>
+      <div class="chat-item">
+        <div class="chat-name"><%= chat.from %></div>
+        <button onclick="window.location.href='/chats/msg/<%= chat._id %>'">More</button>
+      </div>
+    <% }) %>
+  </div>
+  <button onclick="location.href='/chats/new'">Create a Message</button>
+</body>
+</html>
