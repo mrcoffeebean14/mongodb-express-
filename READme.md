@@ -27,21 +27,7 @@ Styling: CSS (custom and responsive)
 
 Middleware: method-override, body-parser
 
-📂 Project Structure
-php
-Copy
-Edit
-├── model/
-│   └── chats.js           # Mongoose schema for chat messages
-├── views/
-│   ├── chats.ejs          # List view of all chats
-│   ├── msg.ejs            # Single chat view
-│   ├── new.ejs            # Form to create new message
-│   └── edit.ejs           # Edit existing message
-├── public/
-│   └── styles.css         # CSS for styling pages
-├── app.js                 # Main Express server file
-└── README.md              # Project description
+![image](https://github.com/user-attachments/assets/9ca84895-dc0f-468a-b6fa-a9b2ccdd24ca)
 
 
 
